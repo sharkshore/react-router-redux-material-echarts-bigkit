@@ -1,5 +1,5 @@
-# react-router-redux-kit
-react-redux项目起步
+# react-router-redux-bigkit
+大型redux项目起步
 ##项目包含以下内容
 
 1. router
