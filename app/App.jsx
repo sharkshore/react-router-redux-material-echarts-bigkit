@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderBar from "./components/HeaderBar.jsx"
-import SideBar from './components/SideBar.jsx'
+import HeaderBar from "./layouts/HeaderBar.jsx"
+import SideBar from './layouts/SideBar.jsx'
 
 import styles from './App.css'
 

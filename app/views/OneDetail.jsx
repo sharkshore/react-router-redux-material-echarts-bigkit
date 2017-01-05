@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 
-import {updateGoods, addGoods}from '../actions/goods'
+import {updateGoods, addGoods}from './redux/OneRedux'
 import {Link, browserHistory} from 'react-router';
 
 class OneDetail extends React.Component {

@@ -1,5 +1,5 @@
-import goods from './goods'
-import goodstype from './goodstype'
+import goods from '../views/redux/OneRedux'
+import goodstype from '../views/redux/TwoRedux'
 import {combineReducers} from 'redux'
 import {routerReducer} from 'react-router-redux'
 

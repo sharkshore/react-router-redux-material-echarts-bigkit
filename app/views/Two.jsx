@@ -1,10 +1,10 @@
 import React from 'react';
-import SimpleTable from '../components/SimpleTable.jsx';
+import SimpleTable from '../components/common/SimpleTable.jsx';
 import {Link} from 'react-router';
 import {connect} from 'react-redux'
 
-import {deleteGoodsType, detailGoodsType}from '../actions/goodstype'
-import {FIELD_GOODS_TYPE,TITLE_GOODS_TYPE} from '../consts/TableTitleFields'
+import {deleteGoodsType }from './redux/TwoRedux'
+import {FIELD_GOODS_TYPE,TITLE_GOODS_TYPE} from './redux/TwoRedux'
 import { browserHistory} from 'react-router';
 
 class Two extends React.Component {

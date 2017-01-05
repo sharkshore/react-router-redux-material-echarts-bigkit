@@ -1,4 +1,37 @@
-import * as types from '../consts/ActionTypes'
+
+/*  商品  */
+export const FIELD_GOODS= ['id', 'name','type','price'];
+export const TITLE_GOODS= ['商品ID', '商品名称','商品类型','价格'];
+
+
+
+/*  商品  */
+export const ADD_GOODS = 'ADD_GOODS';
+export const DELETE_GOODS = 'DELETE_GOODS';
+export const UPDATE_GOODS = 'UPDATE_GOODS';
+
+export function addGoods(text) {
+    return {
+        type: ADD_GOODS,
+        text
+    }
+}
+
+export function deleteGoods(text) {
+    return {
+        type: DELETE_GOODS,
+        text
+    }
+}
+
+export function updateGoods(text) {
+    return {
+        type: UPDATE_GOODS,
+        text
+    }
+}
+
+
 
 const initgoods= [
     {
@@ -25,16 +58,16 @@ const initgoods= [
 //这里的state只是一个局部state,在redux的store中,相当于根root.goods
 function goods(state = initgoods, action) {
     switch (action.type) {
-        case types.ADD_GOODS:
+        case ADD_GOODS:
             return [
                 ...state,
                 action.text
             ];
-        case types.DELETE_GOODS:
+        case DELETE_GOODS:
             return state.filter(goods =>
                 goods.id != action.text.id
             );
-        case types.UPDATE_GOODS:
+        case UPDATE_GOODS:
             return state.map(goods =>
                 goods.id == action.text.id ? action.text : goods
             );

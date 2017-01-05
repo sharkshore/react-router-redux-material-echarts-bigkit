@@ -6,11 +6,11 @@ import configureStore from './app/stores/configureStore.js'
 import {syncHistoryWithStore} from 'react-router-redux'
 
 import App from './app/App.jsx';
-import One from './app/pages/One.jsx';
-import Two from './app/pages/Two.jsx';
-import OneDetail from './app/pages/OneDetail.jsx';
-import TwoDetail from './app/pages/TwoDetail.jsx';
-import Home from './app/pages/Home.jsx';
+import One from './app/views/One.jsx';
+import Two from './app/views/Two.jsx';
+import OneDetail from './app/views/OneDetail.jsx';
+import TwoDetail from './app/views/TwoDetail.jsx';
+import Home from './app/views/Home.jsx';
 
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
