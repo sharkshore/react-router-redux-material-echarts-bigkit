@@ -1,15 +1,15 @@
 
-/*  商品  */
+/*  1.constants  */
+/*  constants-table  */
 export const FIELD_GOODS= ['id', 'name','type','price'];
 export const TITLE_GOODS= ['商品ID', '商品名称','商品类型','价格'];
 
-
-
-/*  商品  */
+/*  constants-action  */
 export const ADD_GOODS = 'ADD_GOODS';
 export const DELETE_GOODS = 'DELETE_GOODS';
 export const UPDATE_GOODS = 'UPDATE_GOODS';
 
+/*  2.actionCreator  */
 export function addGoods(text) {
     return {
         type: ADD_GOODS,
@@ -54,6 +54,7 @@ const initgoods= [
     }
 ];
 
+/*  3.reducer  */
 
 //这里的state只是一个局部state,在redux的store中,相当于根root.goods
 function goods(state = initgoods, action) {
@@ -76,5 +77,16 @@ function goods(state = initgoods, action) {
     }
 
 }
+
+/*  4.reselect  */
+//mapStateToProps用到的辅助方法
+export function getOne(goods, id) {
+    for (var i = 0; i < goods.length; i++) {
+        if (goods[i].id == id) {
+            return goods[i];
+        }
+    }
+}
+
 
 export default goods;

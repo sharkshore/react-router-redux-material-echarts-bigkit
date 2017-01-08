@@ -1,48 +1,49 @@
+import {updateGoodsType, addGoodsType}from './redux/TwoRedux'
 import React from 'react';
 import {connect} from 'react-redux'
+import {updateGoods, addGoods }from './redux/OneRedux'
+import {browserHistory} from 'react-router';
 
-import {updateGoodsType, addGoodsType}from './redux/TwoRedux'
-import {Link, browserHistory} from 'react-router';
+import {Field, reduxForm, formValueSelector} from 'redux-form'
+
+
+/*renderInput|参数效验*/
+const renderInput = ({input, label, type, meta: {touched, error, warning}}) => (
+    <div>
+        <label>{label}</label>
+        <div>
+            <input {...input} placeholder={label} type={type}/>
+            {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
+        </div>
+    </div>
+)
+
 
 class TwoDetail extends React.Component {
 
-    handleSubmit(e) {
-        e.preventDefault();
-        var g = {id: this.refs.id.value, name: this.refs.name.value};
+    handleSubmit(values) {
         if (this.props.params.id == 0) {
-            this.props.handleAdd(g);
-            browserHistory.push('/two');
+            this.props.handleAdd(values);
         } else {
-            this.props.handleUpdate(g);
-            browserHistory.push('/two');
+            this.props.handleUpdate(values);
         }
+        browserHistory.push('/two');
     }
 
+
     render() {
-        var {onegoodstype}=this.props;
-        var button, id, name;
-        if (this.props.params.id == 0) {
-            ; button = <input type="submit" value={'添加'}/>;
-        } else {
-            ; id=onegoodstype.id;
-            ; name=onegoodstype.name;
-            ; button = <input type="submit" value={'修改'}/>;
-        }
+
+        const {error, handleSubmit, reset, submitting, pristine}=this.props;
 
         return (
             <div>
-                <form onSubmit={this.handleSubmit.bind(this)}>
+                <form onSubmit={handleSubmit(this.handleSubmit.bind(this))}>
+
+                    <Field name="id" component={renderInput} type="text"  label="商品类型ID"/>
+                    <Field name="name" component={renderInput} type="text"  label="商品类型名称"/>
                     <div>
-                        <label >商品类型ID</label>
-                        <input type="text" ref="id" defaultValue={id}  />
-                    </div>
-                    <div>
-                        <label >商品类型名称</label>
-                        <input type="text" ref="name" defaultValue={name}/>
-                    </div>
-                    <div>
-                        <input type="reset" value={'取消'}/>
-                        {button}
+                        <button type="button" disabled={pristine || submitting} onClick={reset}>重置</button>
+                        <input type="submit" disabled={submitting} value={this.props.params.id == 0 ? '添加' : '修改'}/>;
                     </div>
                 </form>
             </div>
@@ -53,20 +54,19 @@ class TwoDetail extends React.Component {
 TwoDetail.propTypes = {
     handleAdd: React.PropTypes.func.isRequired,
     handleUpdate: React.PropTypes.func.isRequired,
-    onegoodstype: React.PropTypes.object
 }
 
 
 //1.mapStateToProps
 const mapStateToProps = (state, ownProps) => {
-    var one = getOne(state.goodstype, ownProps.params.id);
+    let one = getOne(state.goodstype, ownProps.params.id);
     return {
-        onegoodstype: one
+        initialValues:one
     }
 }
 //mapStateToProps用到的辅助方法
 function getOne(goodstype, id) {
-    for (var i = 0; i < goodstype.length; i++) {
+    for (let i = 0; i < goodstype.length; i++) {
         if (goodstype[i].id == id) {
             return goodstype[i];
         }
@@ -80,6 +80,31 @@ const mapDispatchToProps = {
     handleUpdate: (goodsType) => updateGoodsType(goodsType)
 }
 
+/*  参数效验  */
+const validate = values => {
+    const errors = {};
+    //空值效验
+    if (!values.id) {
+        errors.id = '必须填写id'
+    }
+    if (!values.name) {
+        errors.name = '必须填写name'
+    }
+    //格式效验
+    if (!/\d+/.test(values.id)) {
+        errors.id = '必须填写数字'
+    }
+    return errors;
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(TwoDetail)
+const form = reduxForm({
+    form: 'two-detail-form',
+    validate,
+})(TwoDetail)
+
+export default connect(mapStateToProps, mapDispatchToProps)(form)
+
+
+
+
 
