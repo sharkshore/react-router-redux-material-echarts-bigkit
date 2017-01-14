@@ -7,6 +7,8 @@
     float: left;
     width: 12%;
     height: 100%;
+    background-color: darkgray;
+    position: fixed;
 }
 .right{
     margin-left: 12%;
