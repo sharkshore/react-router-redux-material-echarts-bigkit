@@ -11,14 +11,12 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import App from './app/App.jsx';
-import One from './app/views/One.jsx';
-import Two from './app/views/Two.jsx';
-import OneDetail from './app/views/OneDetail.jsx';
-import TwoDetail from './app/views/TwoDetail.jsx';
-import Home from './app/views/Home.jsx';
 
+import RootRouter from './app/routes/RootRouter.jsx'
+
+//创建redux的store
 const store = configureStore();
+//创建react-router-redux的对象
 const history = syncHistoryWithStore(browserHistory, store);
 
 //material配套的react-tap-event-plugin插件初始化
@@ -27,16 +25,7 @@ injectTapEventPlugin();
 ReactDOM.render((
         <Provider store={store}>
             <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-                <Router history={history}>
-                    <Route path="/" component={App}>
-                        <IndexRoute component={Home}/>
-                        <Route path="/one" component={One}/>
-                        <Route path="/one/detail/:id" component={OneDetail}/>
-                        <Route path="/two" component={Two}>
-                            <Route path="/two/detail/:id" component={TwoDetail}/>
-                        </Route>
-                    </Route>
-                </Router>
+                <RootRouter history={history}/>
             </MuiThemeProvider>
         </Provider>
     ), document.getElementById('app')

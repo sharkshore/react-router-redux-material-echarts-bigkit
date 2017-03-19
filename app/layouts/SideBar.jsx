@@ -61,9 +61,9 @@ const ListExampleSelectable = () => (
           <ListItem value={21} primaryText="地域分布"   leftIcon={<ContentInbox   /> }             />,
             ]}
       />
-      <ListItem value={3} primaryText="日志分析"  leftIcon={<ContentSend />  } initiallyOpen={true}
+      <ListItem value={3} primaryText="日志报表"  leftIcon={<ContentSend />  } initiallyOpen={true}
             nestedItems={[
-                <ListItem value={31} primaryText="商户返回时长报表"   leftIcon={<ContentInbox   /> }  containerElement={<Link to="/shfhscbb" />}            />,
+                <ListItem value={31} primaryText="商户返回时长报表"   leftIcon={<ContentInbox   /> }  containerElement={<Link to="/shfhsc" />}            />,
             ]}
       />
       <ListItem value={4} primaryText="预警系统"  leftIcon={<ActionGrade /> }   initiallyOpen={true}
