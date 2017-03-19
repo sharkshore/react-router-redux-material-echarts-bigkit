@@ -5,12 +5,12 @@
 
 .left{
     float: left;
-    width: 18%;
+    width: 16%;
     height: 100%;
     position: fixed;
 }
 .right{
-    margin-left: 18%;
+    margin-left: 16%;
     width:auto
 }
 
