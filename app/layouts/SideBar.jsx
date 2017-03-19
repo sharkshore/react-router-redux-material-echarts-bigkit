@@ -1,18 +1,80 @@
-import {Link} from 'react-router';
 import React from 'react';
-import styles from './css/SideBar.css'
+import {Link} from 'react-router';
+import { browserHistory} from 'react-router';
 
-export default class SideBar extends React.Component {
-    render() {
-        return (
-            <div className={styles.root}>
-                <ul>
-                    <li className={styles.item}><Link to="/" onlyActiveOnIndex activeClassName={styles.active} >首页</Link></li>
-                    <li className={styles.item}><Link to="/one" activeClassName={styles.active}>商品管理</Link></li>
-                    <li className={styles.item}><Link to="/two" activeClassName={styles.active}>商品类型</Link></li>
-                </ul>
-            </div>
-        );
+import styles from './css/HeaderBar.css'
+
+import {List, ListItem, makeSelectable} from 'material-ui/List';
+import Avatar from 'material-ui/Avatar';
+import Subheader from 'material-ui/Subheader';
+
+import ActionGrade from 'material-ui/svg-icons/action/grade';
+import Book from 'material-ui/svg-icons/action/book';
+import ContentInbox from 'material-ui/svg-icons/content/inbox';
+import ContentDrafts from 'material-ui/svg-icons/content/drafts';
+import ContentSend from 'material-ui/svg-icons/content/send';
+import Apps from 'material-ui/svg-icons/navigation/apps'
+
+let SelectableList = makeSelectable(List);
+
+function wrapState(ComposedComponent) {
+  return class SelectableList extends React.Component {
+
+    static propTypes = {
+      children: React.PropTypes.node.isRequired,
+      defaultValue: React.PropTypes.number.isRequired,
+    };
+
+    componentWillMount() {
+      this.setState({
+        selectedIndex: this.props.defaultValue,
+      });
     }
+
+    handleRequestChange = (event, index) => {
+      this.setState({
+        selectedIndex: index,
+      });
+    };
+
+    render() {
+      return (
+        <ComposedComponent
+          value={this.state.selectedIndex}
+          onChange={this.handleRequestChange}
+        >
+          {this.props.children}
+        </ComposedComponent>
+      );
+    }
+  };
 }
+
+SelectableList = wrapState(SelectableList);
+
+const ListExampleSelectable = () => (
+    <SelectableList defaultValue={3}>
+      <Subheader>监控系统</Subheader>
+      <ListItem value={1} primaryText="首页"   leftIcon={<Apps />} />
+      <ListItem value={2} primaryText="访问监控"  leftIcon={<ContentDrafts /> }
+          nestedItems={[
+          <ListItem value={21} primaryText="地域分布"   leftIcon={<ContentInbox   /> }             />,
+            ]}
+      />
+      <ListItem value={3} primaryText="日志分析"  leftIcon={<ContentSend />  }
+            nestedItems={[
+                <ListItem value={31} primaryText="访问时长报表"   leftIcon={<ContentInbox   /> }             />,
+            ]}
+      />
+      <ListItem value={4} primaryText="预警系统"  leftIcon={<ActionGrade /> }
+            nestedItems={[
+                <ListItem value={41} primaryText="预警设置"   leftIcon={<ContentInbox   /> }             />,
+            ]}
+      />
+      <ListItem value={5} primaryText="服务器监控" leftIcon={<ContentDrafts />}  > </ListItem>
+      <ListItem value={6} primaryText="意见反馈" leftIcon={<Book />}  />
+    </SelectableList>
+);
+
+export default ListExampleSelectable;
 

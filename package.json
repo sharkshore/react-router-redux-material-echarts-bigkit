@@ -10,16 +10,18 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "^2.0.0",
+    "material-ui": "^0.17.1",
     "normalize.css": "^4.0.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
-    "react-router": "^2.0.0",
-    "redux": "^3.0.4",
     "react-redux": "^4.0.0",
+    "react-router": "^2.0.0",
+    "react-router-redux": "^4.0.7",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.0.4",
+    "redux-form": "^6.4.3",
     "redux-saga": "^0.14.1",
     "redux-thunk": "^2.1.0",
-    "react-router-redux": "^4.0.7",
-    "redux-form": "^6.4.3",
     "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {
