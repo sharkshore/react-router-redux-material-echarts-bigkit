@@ -5,20 +5,22 @@ import styles from './css/ShfhscContent.css'
 
 import SearchForm from './SearchForm.jsx'
 import Histogram from './Histogram.jsx'
+import ChartContainer from './ChartContainer.jsx'
 import FanChart from './FanChart.jsx'
 import ReportTable from './ReportTable.jsx'
+import TabBar from '../TabBar.jsx'
 
 /**
- * 商户返回时长页面除了顶上的breadhead下面的内容
+ *
+ * 商户返回时长页面 / 身份证查询tab页面
  */
-export default class ShfhscContent extends React.Component {
+export default class SfzcxContent extends React.Component {
 
     render() {
         return (
             <Paper className={styles.root} zDepth={1}>
                 <SearchForm/>
-                <Histogram/>
-                <FanChart/>
+                <ChartContainer/>
                 <ReportTable/>
             </Paper>
         );

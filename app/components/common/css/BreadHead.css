@@ -1,6 +1,12 @@
 .root{
     padding: 1rem 2rem 2rem 0;
+    font-size: 18px;
 }
 .content{
     display: block;
+}
+
+.span{
+    text-decoration: none;
+    cursor: pointer;
 }

@@ -12,15 +12,22 @@ export default class BreadHead extends React.Component {
         firstUrl:React.PropTypes.string.isRequired,
         secondLevel:React.PropTypes.string,
         secondUrl:React.PropTypes.string,
+        disabled:React.PropTypes.bool,
     };
 
     render() {
+        const {firstUrl,firstLevel,secondUrl,secondLevel,disabled}=this.props;
+
+        //如果disabled为true,则第二级不显示
         return (
-            <div className={styles.root}>
+            <h3 className={styles.root}>
                 <span className={styles.content} >
-                <span><Link to={this.props.firstUrl}>{this.props.firstLevel}</Link></span> / <span><Link to={this.props.secondUrl}>{this.props.secondLevel}</Link></span>
+                <span ><Link to={firstUrl} className={styles.span}>{firstLevel}</Link></span>
+                    {
+                        !disabled?<span> / <Link className={styles.span} to={this.props.secondUrl}>{this.props.secondLevel}</Link></span> :''
+                    }
                 </span>
-            </div>
+            </h3>
         );
     }
 }

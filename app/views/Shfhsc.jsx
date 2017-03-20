@@ -1,7 +1,7 @@
 import React from 'react';
 
 import BreadHead from '../components/common/BreadHead.jsx'
-import ShfhscContent from '../components/shfhsc/ShfhscContent.jsx'
+import TabBar from '../components/shfhsc/TabBar.jsx'
 
 /**
  * 商户返回时长统计页面
@@ -12,7 +12,8 @@ export default class Shfhsc extends React.Component {
         return (
             <div>
                 <BreadHead firstLevel="日志报表" firstUrl={"one"} secondUrl={"two"} secondLevel={"商户返回时长报表"}/>
-                <ShfhscContent/>
+                <TabBar/>
+                {this.props.children}
             </div>
         );
     }

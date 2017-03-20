@@ -6,6 +6,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import styles from './css/SearchForm .css'
 
+import Intl from 'intl'
+
 /**
  * 查询表单
  */
@@ -41,15 +43,16 @@ export default class SearchForm extends React.Component {
           value: 'valueKey',
         };*/
 
+
         return (
             <div id="111">
-                <div id="222" className={styles.inlineField}>
+                <div  className={styles.inlineField}>
                 <DatePicker  onChange={this.handleChangeMinDate} autoOk={true} floatingLabelText="起始时间"
-                            defaultDate={minDate} disableYearSelection={false} />
+                            defaultDate={minDate} disableYearSelection={false} container={'inline'} />
                 </div>
-                <div id="333" className={styles.inlineField}>
+                <div  className={styles.inlineField}>
                 <DatePicker   onChange={this.handleChangeMaxDate} autoOk={true} floatingLabelText="结束时间"
-                            defaultDate={minDate} disableYearSelection={false} />
+                            defaultDate={maxDate} disableYearSelection={false} container={'inline'} />
                 </div>
                  <AutoComplete floatingLabelText="商户名称" filter={filter}    openOnFocus={true} dataSource={dataSource2} />
                 <RaisedButton label="查询" primary={true} style={{margin:12}} />
