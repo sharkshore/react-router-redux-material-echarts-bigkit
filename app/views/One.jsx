@@ -3,8 +3,7 @@ import SimpleTable from '../components/common/SimpleTable.jsx';
 import {Link} from 'react-router';
 import {connect} from 'react-redux'
 
-import {deleteGoods}from './redux/OneRedux'
-import {FIELD_GOODS,TITLE_GOODS} from './redux/OneRedux'
+import {FIELD_GOODS,TITLE_GOODS,deleteGoods} from './redux/OneRedux'
 import { browserHistory} from 'react-router';
 
 class One extends React.Component {

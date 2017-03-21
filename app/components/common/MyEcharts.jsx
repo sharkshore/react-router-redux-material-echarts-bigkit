@@ -2,15 +2,15 @@ import React from 'react';
 import echarts from 'echarts';
 
 /**
- * 封装Echarts公共使用方法
+ * 自定义Echarts公共组件
  */
 export default class MyEcharts extends React.Component {
 
     static propTypes={
-        option:React.PropTypes.object.isRequired,
-        containerId:React.PropTypes.string.isRequired,
-        width:React.PropTypes.string.isRequired,
-        height:React.PropTypes.string.isRequired,
+        option:React.PropTypes.object.isRequired,//参数项
+        containerId:React.PropTypes.string.isRequired,//容器的ID
+        width:React.PropTypes.string.isRequired,//容器的宽度
+        height:React.PropTypes.string.isRequired,//容器的高度
     };
 
     componentDidMount() {

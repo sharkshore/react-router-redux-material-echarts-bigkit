@@ -1,7 +1,7 @@
 import React from 'react';
 
-import FanChart from './FanChart.jsx'
-import Histogram from './Histogram.jsx'
+import LeftHistogram from './IdCardHistogram.jsx'
+import RightFanChart from './IdCardFanChart.jsx'
 
 /**
  * 图表的容器
@@ -9,14 +9,10 @@ import Histogram from './Histogram.jsx'
 export default class ChartContainer extends React.Component {
 
     render() {
-        const clearfloat={
-            clear:'both'
-        }
         return (
             <div style={{marginTop:'2rem'}}>
-                <Histogram/>
-                <FanChart/>
-                <div style={clearfloat}></div>
+                <LeftHistogram/>
+                <RightFanChart/>
             </div>
         );
     }
