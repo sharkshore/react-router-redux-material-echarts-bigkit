@@ -1,6 +1,5 @@
 import React from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
-import {Nav,NavItem} from 'react-bootstrap'
 import styles from './TabBar.css'
 
 import {connect} from 'react-redux'
