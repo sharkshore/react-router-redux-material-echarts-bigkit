@@ -6,7 +6,7 @@ import MyEcharts from './MyEcharts.jsx'
 /**
  * 自定义柱状图组件,默认有3个视图
  * 在MyEcharts基础上再度封装
- * 定义baseOptionSet和dataOptionSet
+ * 用户只需给定baseOptionSet和dataOptionSet
  */
 export default class Histogram extends React.Component {
 
@@ -172,7 +172,7 @@ export default class Histogram extends React.Component {
             ]
         };
 
-        console.log(baseOption);
+        console.log('dataOption:');
         console.log(dataOption);
         return (
             <MyEcharts baseOption={baseOption} dataOption={dataOption} containerId={containerId} width={width} height={height}/>

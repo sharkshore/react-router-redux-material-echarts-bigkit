@@ -12,7 +12,7 @@ import {TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME,
 
 
 /**
- *
+ * 身份证查询的柱状图
  */
 class IdCardHistogram extends React.Component {
 
@@ -34,9 +34,9 @@ class IdCardHistogram extends React.Component {
 
 export default connect (
     (state,ownProps)=>({
-        DATA_TOTAL:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','鹏元征信',0),
-        DATA_ONE:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','宝付支付有限公司',0),
-        DATA_TWO:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','鹏元征信',0),
+        DATA_TOTAL:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','',0),
+        DATA_ONE:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','',1),
+        DATA_TWO:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','',2),
     }),
     {
         // toform:()=> push('/two'),

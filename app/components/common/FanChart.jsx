@@ -5,7 +5,7 @@ import MyEcharts from './MyEcharts.jsx'
 /**
  * 自定义扇形图组件,默认有一个视图
  * 在MyEcharts基础上再度封装
- * 定义baseOptionSet和dataOptionSet
+ * 用户只需给定baseOptionSet和dataOptionSet
  */
 export default class FanChart extends React.Component {
 

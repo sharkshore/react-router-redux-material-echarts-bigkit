@@ -7,7 +7,7 @@ import SearchForm from './SearchForm.jsx'
 import Histogram from '../../common/Histogram.jsx'
 import ChartContainer from './ChartContainer.jsx'
 import FanChart from '../../common/FanChart.jsx'
-import ReportTable from './ReportTable.jsx'
+import ReportTable from './IdCardTable.jsx'
 import TabBar from '../TabBar.jsx'
 
 /**
