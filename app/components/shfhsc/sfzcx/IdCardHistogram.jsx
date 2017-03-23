@@ -1,12 +1,14 @@
 import React from 'react';
-import {connect} from 'react-redux'
-import {push} from 'react-router-redux'
 
 import Histogram from '../../common/Histogram.jsx'
+
+import {connect} from 'react-redux'
+
+import {getIdCardHistogramData} from './redux/IdCardRepositoryRedux'
 import styles from './css/LeftHistogram.css'
 
 
-import {TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, LEGEND_DATA, TOOL_TIP_FORMATTER, DATA_TOTAL, DATA_ONE, DATA_TWO}  from './redux/IdCardHistogramConst'
+import {TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_FORMATTER, }  from './redux/IdCardHistogramConst'
 
 
 /**
@@ -15,11 +17,16 @@ import {TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, LEGEND_DATA,
 class IdCardHistogram extends React.Component {
 
     render() {
-        const customOption={TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, LEGEND_DATA, TOOL_TIP_FORMATTER, DATA_TOTAL, DATA_ONE, DATA_TWO} ;
+        const {DATA_TOTAL,DATA_ONE,DATA_TWO}=this.props;
+        const baseOptionSet={TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_FORMATTER,   } ;
+        const dataOptionSet={DATA_TOTAL,DATA_TWO,DATA_ONE};
+
+        console.log("dataOptionSet:");
+        console.log(dataOptionSet);
 
         return (
             <div className={styles.root}>
-                <Histogram customOption={customOption} containerId="LeftHistogram" width="100%" height="30rem"/>
+                <Histogram baseOptionSet={baseOptionSet} dataOptionSet={dataOptionSet}  containerId="LeftHistogram" width="100%" height="30rem"/>
             </div>
         )
     }
@@ -27,12 +34,14 @@ class IdCardHistogram extends React.Component {
 
 export default connect (
     (state,ownProps)=>({
-        goods:state.goods
+        DATA_TOTAL:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','鹏元征信',0),
+        DATA_ONE:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','宝付支付有限公司',0),
+        DATA_TWO:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','鹏元征信',0),
     }),
     {
-        toform:()=> push('/two'),
-        handleDelete: (goods) =>  deleteGoods(goods)  ,
+        // toform:()=> push('/two'),
+        // handleDelete: (goods) =>  deleteGoods(goods)  ,
     }
-)(LeftHistogram);
+)(IdCardHistogram);
 
 

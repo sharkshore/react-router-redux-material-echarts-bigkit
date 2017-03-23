@@ -19,19 +19,20 @@ export default class RootRouter extends React.Component {
     render() {
         return (
                 <Router {...this.props} >
-                    <Route path="/" component={App}>
+                    {/*  此处设置成和项目文件夹一个名字,保证发布到服务器时URL路径一致  */}
+                    <Route path="/log-frontend" component={App}>
                         <IndexRoute component={Jrgc}/>
-                        <Route path="/one" component={One}/>
-                        <Route path="/shfhsc" component={Shfhsc}>
-                            <Route path="/shfhsc/sfzcx" component={Sfzcx}/>
-                            <Route path="/shfhsc/shcx" component={Shcx}/>
-                            <Route path="/shfhsc/yhqcx" component={Yhqcx}/>
+                        <Route path="/log-frontend/one" component={One}/>
+                        <Route path="/log-frontend/shfhsc" component={Shfhsc}>
+                            <Route path="/log-frontend/shfhsc/sfzcx" component={Sfzcx}/>
+                            <Route path="/log-frontend/shfhsc/shcx" component={Shcx}/>
+                            <Route path="/log-frontend/shfhsc/yhqcx" component={Yhqcx}/>
                         </Route>
-                        <Route path="/sfzcx" component={Sfzcx}/>
-                        <Route path="/jrgc" component={Jrgc}/>
-                        <Route path="/one/detail/:id" component={OneDetail}/>
-                        <Route path="/two" component={Two}>
-                            <Route path="/two/detail/:id" component={TwoDetail}/>
+                        <Route path="/log-frontend/sfzcx" component={Sfzcx}/>
+                        <Route path="/log-frontend/jrgc" component={Jrgc}/>
+                        <Route path="/log-frontend/one/detail/:id" component={OneDetail}/>
+                        <Route path="/log-frontend/two" component={Two}>
+                            <Route path="/log-frontend/two/detail/:id" component={TwoDetail}/>
                         </Route>
                     </Route>
                 </Router>

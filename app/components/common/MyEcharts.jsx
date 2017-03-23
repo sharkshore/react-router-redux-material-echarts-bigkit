@@ -3,25 +3,42 @@ import echarts from 'echarts';
 
 /**
  * 自定义Echarts公共组件
+ * 实现数据更新,自动刷新组件
  */
 export default class MyEcharts extends React.Component {
 
     static propTypes={
-        option:React.PropTypes.object.isRequired,//参数项
+        baseOption:React.PropTypes.object.isRequired,//基本参数项
+        dataOption:React.PropTypes.object.isRequired,//数据参数项
         containerId:React.PropTypes.string.isRequired,//容器的ID
         width:React.PropTypes.string.isRequired,//容器的宽度
         height:React.PropTypes.string.isRequired,//容器的高度
     };
 
-    componentDidMount() {
-        let mychart=echarts.init(document.getElementById(this.props.containerId));
-        mychart.setOption(this.props.option);
+    //组件更新完毕
+    //数据如果变化,自动setOption
+    componentDidUpdate(){
+        this.mychart.setOption(this.props.dataOption);
+        console.log(this.props.containerId+"开始更新数据...");
+        console.log(this.props.dataOption);
     }
+
+    //初次渲染成功
+    componentDidMount() {
+        this.mychart=echarts.init(document.getElementById(this.props.containerId));
+        this.mychart.setOption(this.props.baseOption);
+        this.mychart.setOption(this.props.dataOption);
+        //添加点击事件
+/*        this.mychart.on('click',(params)=>{
+            console.log(params);
+        })*/
+    }
+
 
     render() {
         const {containerId,width,height}=this.props;
         return (
-            <div id={containerId}  style={{width:this.props.width,height:this.props.height}} >
+            <div id={containerId}  style={{width:width,height:height}} >
             </div>
         );
     }

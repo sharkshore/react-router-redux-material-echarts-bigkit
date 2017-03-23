@@ -3243,16 +3243,18 @@ export const REFRESH_DATA_ERROR= 'REFRESH_DATA_ERROR';
 
 
 //4.这里的state只是一个局部state,在redux的store中,相当于根root.goods
-function IdCardRepository(state = initIdCardData, action) {
+export default function IdCardRepository(state = initIdCardData, action) {
     switch (action.type) {
         case REFRESH_DATA:
-            console.log('加载loading');
+            // console.log('加载loading');
             console.log('REFRESH_DATA');
             return state;
         case REFRESH_DATA_SUCCESS:
             console.log('REFRESH_DATA_SUCCESS');
-            console.log('data:'+action.payload);
-            return state;
+            console.log('接口返回数据:');
+            console.log(action.payload);
+            //MyEcharts组件会自动检测数据的变化,数据发生变化会自动setOption
+            return action.payload;
         case REFRESH_DATA_ERROR:
             console.log('REFRESH_DATA_ERROR');
             return state;
@@ -3262,20 +3264,63 @@ function IdCardRepository(state = initIdCardData, action) {
 }
 
 //5.查询方法
-//5.1查询柱状图的数据
-export function getIdCardHistogramData(state,beginDate,endDate,member) {
-    let result=[];
+//5.1查询柱状图所有产品的数据
+//结果需要name,value的结构
+/**
+ return[
+ {
+     name:'2017-03-01',
+     value:3225
+ },
+ {
+     name:'2017-03-02',
+     value:225
+ },
+ {
+     name:'2017-03-03',
+     value:2125
+ }
+ ]
+*/
+
+export function getIdCardHistogramData(state,beginDate,endDate,member,product) {
+
+    //不考虑时长等级,所有相同天数,相同公司,相同产品,数据应该累加
+
+    //查询全部商户的
     if(!member||member=='') {
         //进行聚合操作,聚合所有商户
+        return [];
     }
-    //只需过滤时间条件,过滤商户就可以了
-    state.forEach((item,index)=>{
-        if(item.member==member && beginDate<=item.date && endDate>=item.date){
-            result.push(item);
+
+    //查询指定商户
+    //如果product=0,则查询符合条件的所有数据
+    let result= state.filter((item)=>{
+        if(product==0){
+            return item.member==member && beginDate<=item.date && endDate>=item.date;
+        }else{
+            return item.member==member && beginDate<=item.date && endDate>=item.date &&item.product == product;
         }
-    })
+    });
+
+    //改造成name,value的结构
+    return result.map((item)=>{
+        item.name=item.date;
+        item.value=item.count;
+        return item;
+    });
 }
 
+//5.2查询扇形图产品的数据
+//目前没有区分product
+export function getIdCardFanChartData(state,beginDate,endDate,member) {
+    //查询全部商户的
+    if(!member||member=='') {
+        //进行聚合操作,聚合所有商户
+        return [];
+    }
+    //查询指定商户
 
+}
 
 

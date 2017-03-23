@@ -2,30 +2,31 @@ import React from 'react';
 import MyEcharts from './MyEcharts.jsx'
 
 
-
-
-
 /**
- * 自定义扇形图组件
+ * 自定义扇形图组件,默认有一个视图
+ * 在MyEcharts基础上再度封装
+ * 定义baseOptionSet和dataOptionSet
  */
 export default class FanChart extends React.Component {
 
     static propTypes = {
-        customOption: React.PropTypes.object.isRequired,//定制的参数项
+        baseOptionSet: React.PropTypes.object.isRequired,//定制的参数项
+        dataOptionSet: React.PropTypes.object.isRequired,//需要变化的数据
         containerId: React.PropTypes.string.isRequired,//容器的ID
         width: React.PropTypes.string.isRequired,//容器的宽度
         height: React.PropTypes.string.isRequired,//容器的高度
     };
 
     render() {
-        const {customOption, containerId, width, height}=this.props;
-        const {TITLE, SUB_TITLE, LEGEND_DATA, TOOL_TIP_FORMATTER, DATA_TOTAL, } =customOption;
+        const {baseOptionSet,dataOptionSet, containerId, width, height}=this.props;
+        const {TITLE, SUB_TITLE, LEGEND_DATA, TOOL_TIP_FORMATTER, } =baseOptionSet;
+        const {DATA_TOTAL}=dataOptionSet;
 
-        const option = {
+        const baseOption = {
             title: {
                 text: TITLE,
                 x: 'center',
-                subtext:SUB_TITLE,
+                subtext: SUB_TITLE,
                 subtextStyle: {
                     fontSize: 14
                 }
@@ -47,7 +48,7 @@ export default class FanChart extends React.Component {
                     type: 'pie',
                     radius: '58%',
                     center: ['40%', '50%'],
-                    data:DATA_TOTAL,
+                    data: [],
                     label: {
                         normal: {
                             show: true,
@@ -72,8 +73,16 @@ export default class FanChart extends React.Component {
             ]
         };
 
+        const dataOption = {
+            series: [{
+                name: 'one',
+                data: DATA_TOTAL
+            },
+            ]
+        }
+
         return (
-        <MyEcharts option={option} containerId={containerId} width={width} height={height}/>
+            <MyEcharts baseOption={baseOption} dataOption={dataOption} containerId={containerId} width={width} height={height}/>
         );
     }
 }

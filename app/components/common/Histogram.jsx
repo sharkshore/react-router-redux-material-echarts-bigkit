@@ -4,23 +4,27 @@ import MyEcharts from './MyEcharts.jsx'
 
 
 /**
- * 自定义柱状图组件
+ * 自定义柱状图组件,默认有3个视图
+ * 在MyEcharts基础上再度封装
+ * 定义baseOptionSet和dataOptionSet
  */
 export default class Histogram extends React.Component {
 
     static propTypes = {
-        customOption: React.PropTypes.object.isRequired,//定制的参数项
+        baseOptionSet: React.PropTypes.object.isRequired,//定制的参数项
+        dataOptionSet: React.PropTypes.object.isRequired,//需要变化的数据
         containerId: React.PropTypes.string.isRequired,//容器的ID
         width: React.PropTypes.string.isRequired,//容器的宽度
         height: React.PropTypes.string.isRequired,//容器的高度
     };
 
     render() {
-        const {customOption, containerId, width, height}=this.props;
-        const {TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, LEGEND_DATA, TOOL_TIP_FORMATTER, DATA_TOTAL, DATA_ONE, DATA_TWO} =customOption;
+        const { baseOptionSet, dataOptionSet,containerId, width, height}=this.props;
+        const {TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_FORMATTER,   } =baseOptionSet;
+        const {DATA_ONE,DATA_TWO,DATA_TOTAL}=dataOptionSet;
 
         // 指定图表的配置项和数据
-        const option = {
+        const baseOption = {
             title: {
                 text: TITLE,
                 x: 'center',
@@ -60,7 +64,7 @@ export default class Histogram extends React.Component {
             ],
             legend: {
                 show: true,
-                data: LEGEND_DATA,
+                data: SERIES_NAME,
                 right: 0,
                 selected: {},
                 selectedMode: 'single'
@@ -116,9 +120,9 @@ export default class Histogram extends React.Component {
             },
             series: [
                 {
-                    name: '全部',
+                    name: SERIES_NAME[0],
                     type: 'bar',
-                    data: DATA_TOTAL,
+                    data: [],
                     barMinHeight: 2,
                     itemStyle: {
                         normal: {
@@ -129,9 +133,9 @@ export default class Histogram extends React.Component {
                     }
                 },
                 {
-                    name: '身份证返照片',
+                    name: SERIES_NAME[1],
                     type: 'bar',
-                    data: DATA_ONE,
+                    data: [],
                     itemStyle: {
                         normal: {
                             color: '#FF1493',
@@ -141,9 +145,9 @@ export default class Histogram extends React.Component {
                     }
                 },
                 {
-                    name: '身份证不返照片',
+                    name: SERIES_NAME[2],
                     type: 'bar',
-                    data: DATA_TWO,
+                    data: [],
                     itemStyle: {
                         normal: {
                             color: '#800080',
@@ -154,9 +158,24 @@ export default class Histogram extends React.Component {
                 },
             ],
         };
+        const dataOption = {
+            series: [{
+                name: SERIES_NAME[0],
+                data: DATA_TOTAL
+            }, {
+                name: SERIES_NAME[1],
+                data: DATA_ONE
+            }, {
+                name: SERIES_NAME[2],
+                data: DATA_TWO
+            }
+            ]
+        };
 
+        console.log(baseOption);
+        console.log(dataOption);
         return (
-            <MyEcharts option={option} containerId={containerId} width={width} height={height}/>
+            <MyEcharts baseOption={baseOption} dataOption={dataOption} containerId={containerId} width={width} height={height}/>
         );
     }
 }
