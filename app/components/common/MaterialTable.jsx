@@ -14,7 +14,7 @@ import {
  * 在Material-ui的表格组件基础上再度封装
  * data是一个对象数组
  *
- * 本插件可以组装分页插件
+ * 本插件可以装载分页插件
  *
  */
 export default class MaterialTable extends React.Component {

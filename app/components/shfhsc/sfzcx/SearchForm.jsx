@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import styles from './css/SearchForm .css'
 import {connect} from 'react-redux'
 
-import {REFRESH_DATA,REFRESH_DATA_ERROR,REFRESH_DATA_SUCCESS} from './redux/IdCardRepositoryRedux'
+import {REFRESH_IDCARD_RES_TIME_DATA,REFRESH_IDCARD_RES_TIME_DATA_ERROR,REFRESH_IDCARD_RES_TIME_DATA_SUCCESS} from './redux/IdCardRepositoryRedux'
 
 import Intl from 'intl'
 
@@ -76,7 +76,7 @@ export default connect (
                 params: {
                     city: 2
                 },
-                types: [REFRESH_DATA,REFRESH_DATA_SUCCESS,REFRESH_DATA_ERROR]
+                types: [REFRESH_IDCARD_RES_TIME_DATA,REFRESH_IDCARD_RES_TIME_DATA_SUCCESS,REFRESH_IDCARD_RES_TIME_DATA_ERROR]
             }
         )
     })

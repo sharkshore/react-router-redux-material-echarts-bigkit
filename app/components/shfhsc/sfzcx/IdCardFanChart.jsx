@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {push} from 'react-router-redux'
 
 import FanChart from '../../common/FanChart.jsx'
 import {TITLE, SUB_TITLE, LEGEND_DATA, TOOL_TIP_FORMATTER, DATA_TOTAL,} from './redux/IdCardFanChartConst'
@@ -32,8 +31,6 @@ export default connect(
         DATA_TOTAL: getIdCardFanChartData(state.IdCardRepository,'2017-03-01','2017-07-08',''),
     }),
     {
-        toform: () => push('/two'),
-        handleDelete: (goods) => deleteGoods(goods),
     }
 )(IdCardFanChart);
 

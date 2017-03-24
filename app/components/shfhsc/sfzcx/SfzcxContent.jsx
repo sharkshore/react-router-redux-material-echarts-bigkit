@@ -7,7 +7,7 @@ import SearchForm from './SearchForm.jsx'
 import Histogram from '../../common/Histogram.jsx'
 import ChartContainer from './ChartContainer.jsx'
 import FanChart from '../../common/FanChart.jsx'
-import ReportTable from './IdCardTable.jsx'
+import IdCardTable from './IdCardTable.jsx'
 import TabBar from '../TabBar.jsx'
 
 /**
@@ -21,7 +21,7 @@ export default class SfzcxContent extends React.Component {
             <Paper className={styles.root} zDepth={1}>
                 <SearchForm/>
                 <ChartContainer/>
-                <ReportTable/>
+                <IdCardTable/>
             </Paper>
         );
     }

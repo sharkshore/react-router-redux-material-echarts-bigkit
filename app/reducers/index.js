@@ -5,6 +5,7 @@ import {reducer as form} from 'redux-form'
 import goods from '../views/redux/OneRedux'
 import goodstype from '../views/redux/TwoRedux'
 import IdCardRepository from '../components/shfhsc/sfzcx/redux/IdCardRepositoryRedux'
+import IdcardTable from '../components/shfhsc/sfzcx/redux/IdCardTableRedux'
 
 
 const rootReducer =combineReducers({
@@ -12,7 +13,8 @@ const rootReducer =combineReducers({
     goods,
     routing:routerReducer,
     form,
-    IdCardRepository
+    IdCardRepository,
+    IdcardTable
 });
 
 export default rootReducer;

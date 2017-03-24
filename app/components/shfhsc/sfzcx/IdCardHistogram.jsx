@@ -21,9 +21,6 @@ class IdCardHistogram extends React.Component {
         const baseOptionSet={TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_FORMATTER,   } ;
         const dataOptionSet={DATA_TOTAL,DATA_TWO,DATA_ONE};
 
-        console.log("dataOptionSet:");
-        console.log(dataOptionSet);
-
         return (
             <div className={styles.root}>
                 <Histogram baseOptionSet={baseOptionSet} dataOptionSet={dataOptionSet}  containerId="LeftHistogram" width="100%" height="30rem"/>
@@ -39,8 +36,7 @@ export default connect (
         DATA_TWO:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','',2),
     }),
     {
-        // toform:()=> push('/two'),
-        // handleDelete: (goods) =>  deleteGoods(goods)  ,
+
     }
 )(IdCardHistogram);
 

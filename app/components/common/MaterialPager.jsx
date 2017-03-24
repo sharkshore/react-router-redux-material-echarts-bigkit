@@ -5,8 +5,8 @@ import styles from './css/MaterialPager.css'
 /**
  * Material-ui风格的分页组件
  *
- *
- *
+ *  active函数如果调用外部接口,则变成后端分页模式
+ *  active函数如果调用内部action,则变成前端分页模式
  *
  1.页数只有1页,只显示1页出来
  2.pageMaxNumber<=5,显示最多5页

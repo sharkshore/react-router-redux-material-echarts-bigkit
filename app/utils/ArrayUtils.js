@@ -9,11 +9,13 @@
  */
 export function groupSum(sourceArray,sumField,...groupFields){
 
+    let source=JSON.parse(JSON.stringify(sourceArray));
+
     let finalResult=[];
 
     //对数据进行聚合求和操作,只保留...groupField,countField
-    for (let i = 0; i < sourceArray.length; i++) {
-        let r = sourceArray[i];
+    for (let i = 0; i < source.length; i++) {
+        let r = source[i];
         if (finalResult.length == 0) {
             finalResult.push(r);//如果是空,直接先放进去
         } else {

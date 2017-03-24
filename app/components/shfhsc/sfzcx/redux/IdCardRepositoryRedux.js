@@ -1,8 +1,11 @@
 import {LevelToStr,ProductToStr} from '../../../../consts/Enums'
 import {groupSum,selectFieldArray} from '../../../../utils/ArrayUtils'
+import {refreshTableAction} from './IdCardTableRedux'
+import {pageSize,countPageNum} from '../../../../consts/TablePageSet'
 
 /**
- * idcard的柱状图和idcard的
+ * 身份证统计数据的redux
+ * 目前是柱状图和扇形图公用一个redux,以后有机会再拆分
  * @type {[*]}
  */
 
@@ -3244,27 +3247,26 @@ const initIdCardData = [
     },
 ];
 
-//2.刷新获取新的数据
-export const REFRESH_DATA = 'REFRESH_DATA';
-export const REFRESH_DATA_SUCCESS = 'REFRESH_DATA_SUCCESS';
-export const REFRESH_DATA_ERROR = 'REFRESH_DATA_ERROR';
+//2.刷新商户放回时长的统计数据
+export const REFRESH_IDCARD_RES_TIME_DATA = 'REFRESH_IDCARD_RES_TIME_DATA';
+export const REFRESH_IDCARD_RES_TIME_DATA_SUCCESS = 'REFRESH_IDCARD_RES_TIME_DATA_SUCCESS';
+export const REFRESH_IDCARD_RES_TIME_DATA_ERROR = 'REFRESH_IDCARD_RES_TIME_DATA_ERROR';
 
 
-//4.这里的state只是一个局部state,在redux的store中,相当于根root.goods
+
+//4.reducer,这里的state只是一个局部state,在redux的store中,相当于根root.goods
 export default function IdCardRepository(state = initIdCardData, action) {
     switch (action.type) {
-        case REFRESH_DATA:
+        case REFRESH_IDCARD_RES_TIME_DATA:
             // console.log('加载loading');
-            console.log('REFRESH_DATA');
+            console.log('REFRESH_IDCARD_RES_TIME_DATA');
             return state;
-        case REFRESH_DATA_SUCCESS:
-            console.log('REFRESH_DATA_SUCCESS');
-            console.log('接口返回数据:');
-            console.log(action.payload);
+        case REFRESH_IDCARD_RES_TIME_DATA_SUCCESS:
+            console.log('REFRESH_IDCARD_RES_TIME_DATA_SUCCESS');
             //MyEcharts组件会自动检测数据的变化,数据发生变化会自动setOption
             return action.payload;
-        case REFRESH_DATA_ERROR:
-            console.log('REFRESH_DATA_ERROR');
+        case REFRESH_IDCARD_RES_TIME_DATA_ERROR:
+            console.log('REFRESH_IDCARD_RES_TIME_DATA_ERROR');
             return state;
         default:
             return state
@@ -3353,6 +3355,8 @@ export function getIdCardHistogramData(state, beginDate, endDate, member, produc
 
  */
 export function getIdCardFanChartData(state, beginDate, endDate, member) {
+    console.log('开始时的state...');
+    console.dir(state);
 
     if (state.length == 0) {
         return [];
@@ -3371,23 +3375,36 @@ export function getIdCardFanChartData(state, beginDate, endDate, member) {
         }
     });
 
+    console.log('扇形图过滤后的数据:....');
+    console.log(filterResult);
+
     //2.聚合数据,以字段response_level聚合累加到count字段
     finalResult=groupSum(filterResult,'count','response_level');
 
+    console.log('扇形图分组后的数据:....')
+    console.log(finalResult);
+
     //3.构造成name,value的结构
     finalResult = finalResult.map((item) => {
-        item.name = LevelToStr[item.response_level];
-        item.value = item.count;
-        return item;
+        let newitem={};
+        newitem.name = LevelToStr[item.response_level];
+        newitem.value = item.count;
+        return newitem;
     });
-    console.log(finalResult);
+
+    console.log('结束时的state...');
+    console.dir(state);
+
+    console.log('最终result...');
+    console.log(JSON.stringify(finalResult));
+
     return finalResult;
 
 
 }
 
 /**
- * 5.3表格所需要的数据
+ * 5.3表格所需要的所有数据
  *
  * @param state
  * @param beginDate
@@ -3426,6 +3443,31 @@ export function getIdCardTableData(state, beginDate, endDate, member) {
     return finalResult;
 
 }
+
+
+/**
+ * 5.4表格所需要的分页数据
+ *
+ * @param idcardTable
+ * @param idCardRepository
+ */
+export function getIdCardTableDataByPage(IdCardRepository,currentNum,beginDate,endDate){
+    let data=getIdCardTableData(IdCardRepository,beginDate,endDate,'');
+    let pageMaxNum=countPageNum(data.length,pageSize);
+
+    //返回第一页数据
+    if(currentNum<=1){
+        return data.slice(0,pageSize*1);
+    }
+
+    //返回最后一页数据
+    if(currentNum>=pageMaxNum){
+        return data.slice(pageSize*(pageMaxNum-1),data.length);
+    }
+    return data.slice(pageSize*(currentNum-1),pageSize*currentNum);
+
+}
+
 
 
 /**

@@ -73,10 +73,11 @@ export default class FanChart extends React.Component {
             ]
         };
 
-        const dataOption = {
+        let dataOption = {
             series: [{
                 name: 'one',
-                data: DATA_TOTAL
+                data:DATA_TOTAL
+                // data: [ { "name":"0-200", "value":0 }, { "name":"200-400", "value":0 }, { "name":"400-600", "value":0 }, { "name":"600-800", "value":0 }, { "name":"800-1000", "value":0 }, { "name":"1000-1300", "value":0 }, { "name":"1300-1500", "value":0 }, { "name":"1500-2000", "value":0 }, { "name":"2000-4000", "value":0 }, { "name":"4000-6000", "value":0 }, { "name":">6000", "value":0 } ]
             },
             ]
         }
