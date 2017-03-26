@@ -9,6 +9,7 @@ import {connect} from 'react-redux'
 
 import {REFRESH_IDCARD_RES_TIME_DATA,REFRESH_IDCARD_RES_TIME_DATA_ERROR,REFRESH_IDCARD_RES_TIME_DATA_SUCCESS} from './redux/IdCardRepositoryRedux'
 
+import {updatePagerAction} from './redux/IdCardTableRedux'
 import Intl from 'intl'
 
 /**
@@ -25,6 +26,13 @@ class SearchForm extends React.Component {
       maxDate: date,
     });
   };
+
+
+    handleSelectButton(){
+        this.props.refreshData();
+        this.props.pageActive(1);
+    }
+
 
     render() {
         //设置时间控件
@@ -48,7 +56,7 @@ class SearchForm extends React.Component {
           value: 'valueKey',
         };*/
 
-        const {refreshData} =this.props;
+        const {refreshData,pageActive} =this.props;
         return (
             <div >
                 <div  className={styles.inlineField}>
@@ -60,7 +68,7 @@ class SearchForm extends React.Component {
                             defaultDate={maxDate} disableYearSelection={false} container={'inline'} />
                 </div>
                 <AutoComplete floatingLabelText="商户名称" filter={filter}    openOnFocus={true} dataSource={dataSource2} />
-                <RaisedButton label="查询" primary={true} style={{margin:12}} onClick={refreshData}/>
+                <RaisedButton label="查询" primary={true} style={{margin:12}} onClick={this.handleSelectButton.bind(this)}/>
             </div>
         );
     }
@@ -69,8 +77,8 @@ class SearchForm extends React.Component {
 export default connect (
     (state,ownProps)=>({
     }),
-    (dispatch, ownProps)=>({
-        refreshData: (url, params, id) => dispatch(
+    {
+        refreshData: (url, params, id) => (
             {
                 url: '/json',
                 params: {
@@ -78,8 +86,9 @@ export default connect (
                 },
                 types: [REFRESH_IDCARD_RES_TIME_DATA,REFRESH_IDCARD_RES_TIME_DATA_SUCCESS,REFRESH_IDCARD_RES_TIME_DATA_ERROR]
             }
-        )
-    })
+        ),
+        pageActive:(currNumber)=>updatePagerAction(currNumber),
+    }
 )(SearchForm);
 
 

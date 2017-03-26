@@ -3452,6 +3452,7 @@ export function getIdCardTableData(state, beginDate, endDate, member) {
  * @param idCardRepository
  */
 export function getIdCardTableDataByPage(IdCardRepository,currentNum,beginDate,endDate){
+    //首先获取表格的总数
     let data=getIdCardTableData(IdCardRepository,beginDate,endDate,'');
     let pageMaxNum=countPageNum(data.length,pageSize);
 
@@ -3479,3 +3480,4 @@ export function getIdCardHistogramXAxisArray(sourceArray ) {
     return selectFieldArray(sourceArray,'date');
 
 }
+

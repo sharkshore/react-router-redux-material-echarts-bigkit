@@ -4,7 +4,7 @@ import createLogger from 'redux-logger'
 import thunk from 'redux-thunk';
 import {composeWithDevTools} from 'redux-devtools-extension'
 
-import reduxComposableFetch from '../reducers/redux-composable-fetch'
+import reduxComposableFetch from '../reducers/middleware/redux-composable-fetch'
 
 import {browserHistory}from 'react-router'
 import {routerMiddleware} from 'react-router-redux'

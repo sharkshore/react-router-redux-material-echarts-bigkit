@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './css/MaterialPager.css'
+import {countPageNum} from '../../consts/TablePageSet'
 
 
 /**
@@ -20,13 +21,15 @@ import styles from './css/MaterialPager.css'
 export default class MaterialPager extends React.Component {
 
     static propTypes={
-        pageMaxNumber:React.PropTypes.number.isRequired,//最大页数,
+        pageSize:React.PropTypes.number.isRequired,//每页显示数量,
+        totalCount:React.PropTypes.number.isRequired,//总数量,
         currentNumber:React.PropTypes.number.isRequired,//当前页数,
-        active:React.PropTypes.func.isRequired,//钩子function,必须要有一个参数i
+        active:React.PropTypes.func.isRequired,//钩子function,必须要有一个参数i,如pageActive:(currNumber)=>updatePagerAction(currNumber)
     };
 
     render() {
-        const {pageMaxNumber,active,currentNumber}=this.props;
+        const {totalCount,active,currentNumber,pageSize}=this.props;
+        let pageMaxNumber=countPageNum(totalCount,pageSize);
         let lis=[];//定义列表项,
         let nums=[];//存储列表项
         //2.pageMaxNumber<=5,显示最多5页
