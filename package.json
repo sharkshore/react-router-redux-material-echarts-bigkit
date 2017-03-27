@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
 	"start": "webpack-dev-server  --progress --inline --colors  --hot --config ./webpack.config.js  --content-base . --history-api-fallback",
-	"build":"webpack -p --progress --profile --colors --config ./webpack.config.js"
+	"build":"webpack -p --progress --profile --colors --config ./webpack-prd.config.js"
   },
   "author": "",
   "license": "ISC",
