@@ -3317,7 +3317,7 @@ export function getIdCardHistogramData(state, param, product) {
                 return item.member == member && beginDate <= item.date && endDate >= item.date;
             }
         } else {
-            if (!member || member == '') {
+            if (!member || member == '' || member=='所有商户') {
                 return beginDate <= item.date && endDate >= item.date && item.product == product;
             } else {
                 return item.member == member && beginDate <= item.date && endDate >= item.date && item.product == product;
@@ -3330,9 +3330,10 @@ export function getIdCardHistogramData(state, param, product) {
 
     //3.构造成name,value的结构
     finalResult = finalResult.map((item) => {
-        item.name = item.date;
-        item.value = item.count;
-        return item;
+        let newitem={};
+        newitem.name = item.date;
+        newitem.value = item.count;
+        return newitem;
     });
 
 
@@ -3373,7 +3374,6 @@ export function getIdCardFanChartData(state, param) {
     let {beginDateStr:beginDate,endDateStr:endDate,memberName:member}=param;
 
     if (state.length == 0) {
-        console.log(1);
         return [];
     }
 
@@ -3384,10 +3384,8 @@ export function getIdCardFanChartData(state, param) {
     //如果member='',则聚合所有member数据
     filterResult = state.filter((item) => {
         if (!member || member == '' || member=='所有商户') {
-
             return beginDate <= item.date && endDate >= item.date;
         } else {
-            console.log(3);
             return item.member == member && beginDate <= item.date && endDate >= item.date;
         }
     });
@@ -3463,8 +3461,6 @@ export function getIdCardTableData(state, param) {
 export function getIdCardTableDataByPage(IdCardRepository,currentNum,param){
     //首先获取表格的总数
     let data=getIdCardTableData(IdCardRepository,param);
-    console.log('表格数据');
-    console.dir(data);
     let pageMaxNum=countPageNum(data.length,pageSize);
 
     //返回第一页数据

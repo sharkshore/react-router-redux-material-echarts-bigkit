@@ -137,6 +137,8 @@ export default class Histogram extends React.Component {
                     name: SERIES_NAME[1],
                     type: 'bar',
                     data: [],
+                    barMinHeight: 2,
+                    barMaxWidth:30,
                     itemStyle: {
                         normal: {
                             color: '#FF1493',
@@ -149,6 +151,8 @@ export default class Histogram extends React.Component {
                     name: SERIES_NAME[2],
                     type: 'bar',
                     data: [],
+                    barMinHeight: 2,
+                    barMaxWidth:30,
                     itemStyle: {
                         normal: {
                             color: '#800080',
