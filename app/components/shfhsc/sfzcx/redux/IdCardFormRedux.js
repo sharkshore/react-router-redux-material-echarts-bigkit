@@ -10,10 +10,10 @@ import {getLastMonth,dateToString}  from '../../../../utils/DateUtils'
  */
 const initData={
     beginDateStr:dateToString(getLastMonth(new Date())),          //开始时间
-    endDateStr:dateToString(new Date()),       //结束时间
-    memberName:'所有商户',        //商户名称
     beginDate:getLastMonth(new Date()),
-    endDate:new Date()
+    memberName:'所有商户',        //商户名称
+    endDate:new Date(),
+    endDateStr:dateToString(new Date()),       //结束时间
 };
 
 //3.reducer
@@ -25,7 +25,7 @@ export default function IdcardFormParam(state = initData, action) {
             return {
                 beginDateStr:dateToString(action.params.beginDate),
                 endDateStr:dateToString(action.params.endDate),
-                memberName:action.params.searchText,
+                memberName:action.params.searchText==''?'所有商户':action.params.searchText,
                 beginDate:action.params.beginDate,
                 endDate:action.params.endDate
             }

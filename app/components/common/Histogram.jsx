@@ -20,8 +20,8 @@ export default class Histogram extends React.Component {
 
     render() {
         const { baseOptionSet, dataOptionSet,containerId, width, height}=this.props;
-        const {TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_FORMATTER,   } =baseOptionSet;
-        const {DATA_ONE,DATA_TWO,DATA_TOTAL}=dataOptionSet;
+        const {TITLE,  X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_FORMATTER,   } =baseOptionSet;
+        const {DATA_ONE,DATA_TWO,DATA_TOTAL,SUB_TITLE, X_AXIS_ARRAY,}=dataOptionSet;
 
         // 指定图表的配置项和数据
         const baseOption = {
@@ -58,7 +58,7 @@ export default class Histogram extends React.Component {
                 {
                     type: 'slider',
                     start: 0,
-                    end: 50,
+                    end: 55,
                 }
 
             ],
@@ -124,6 +124,7 @@ export default class Histogram extends React.Component {
                     type: 'bar',
                     data: [],
                     barMinHeight: 2,
+                    barMaxWidth:30,
                     itemStyle: {
                         normal: {
                             color: 'rgba(17, 168,171, 1)',
@@ -161,6 +162,9 @@ export default class Histogram extends React.Component {
         const dataOption = {
             title: {
                 subtext: SUB_TITLE,
+            },
+            xAxis: {
+                data: X_AXIS_ARRAY,
             },
             series: [{
                 name: SERIES_NAME[0],

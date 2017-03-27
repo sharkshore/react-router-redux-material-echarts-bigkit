@@ -4,11 +4,11 @@ import Histogram from '../../common/Histogram.jsx'
 
 import {connect} from 'react-redux'
 
-import {getIdCardHistogramData} from './redux/IdCardRepositoryRedux'
+import {getIdCardHistogramData,getIdCardHistogramXAxisArray} from './redux/IdCardRepositoryRedux'
 import styles from './css/LeftHistogram.css'
 
 
-import {TITLE,  X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_FORMATTER, }  from './redux/IdCardHistogramConst'
+import {TITLE,   X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_FORMATTER, }  from './redux/IdCardHistogramConst'
 
 
 /**
@@ -17,11 +17,11 @@ import {TITLE,  X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_
 class IdCardHistogram extends React.Component {
 
     render() {
-        const {DATA_TOTAL,DATA_ONE,DATA_TWO,dateAndMember}=this.props;
+        const {X_AXIS_ARRAY,DATA_TOTAL,DATA_ONE,DATA_TWO,dateAndMember}=this.props;
 
         let SUB_TITLE= `时间:${dateAndMember.beginDateStr} -- ${dateAndMember.endDateStr}\n商户:${dateAndMember.memberName} `;
-        const baseOptionSet={TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_FORMATTER,   } ;
-        const dataOptionSet={DATA_TOTAL,DATA_TWO,DATA_ONE};
+        const baseOptionSet={TITLE, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_FORMATTER,   } ;
+        const dataOptionSet={DATA_TOTAL,DATA_TWO,DATA_ONE, SUB_TITLE, X_AXIS_ARRAY};
 
         return (
             <div className={styles.root}>
@@ -36,6 +36,7 @@ export default connect (
         DATA_TOTAL:getIdCardHistogramData(state.IdCardRepository,state.IdcardFormParam,0),
         DATA_ONE:getIdCardHistogramData(state.IdCardRepository,state.IdcardFormParam,1),
         DATA_TWO:getIdCardHistogramData(state.IdCardRepository,state.IdcardFormParam,2),
+        X_AXIS_ARRAY:getIdCardHistogramXAxisArray(state.IdCardRepository),
         dateAndMember:state.IdcardFormParam
     }),
     {

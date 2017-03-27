@@ -16,8 +16,8 @@ class IdCardFanChart extends React.Component {
         const {dateAndMember,DATA_TOTAL,}=this.props;
 
         let SUB_TITLE= `时间:${dateAndMember.beginDateStr} -- ${dateAndMember.endDateStr}\n商户:${dateAndMember.memberName} `;
-        const baseOptionSet = {TITLE, SUB_TITLE, LEGEND_DATA, TOOL_TIP_FORMATTER,};
-        const dataOptionSet = {DATA_TOTAL};
+        const baseOptionSet = {TITLE,  LEGEND_DATA, TOOL_TIP_FORMATTER,};
+        const dataOptionSet = {DATA_TOTAL,SUB_TITLE};
 
         return (
             <div className={styles.root}>
