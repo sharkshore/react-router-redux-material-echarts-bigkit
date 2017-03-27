@@ -159,6 +159,9 @@ export default class Histogram extends React.Component {
             ],
         };
         const dataOption = {
+            title: {
+                subtext: SUB_TITLE,
+            },
             series: [{
                 name: SERIES_NAME[0],
                 data: DATA_TOTAL

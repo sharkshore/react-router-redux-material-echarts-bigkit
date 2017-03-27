@@ -19,7 +19,8 @@ export default class FanChart extends React.Component {
 
     render() {
         const {baseOptionSet,dataOptionSet, containerId, width, height}=this.props;
-        const {TITLE, SUB_TITLE, LEGEND_DATA, TOOL_TIP_FORMATTER, } =baseOptionSet;
+        const {TITLE,  LEGEND_DATA, TOOL_TIP_FORMATTER, } =baseOptionSet;
+        let {SUB_TITLE}=baseOptionSet;
         const {DATA_TOTAL}=dataOptionSet;
 
         const baseOption = {
@@ -74,6 +75,9 @@ export default class FanChart extends React.Component {
         };
 
         let dataOption = {
+            title: {
+                subtext: SUB_TITLE,
+            },
             series: [{
                 name: 'one',
                 data:DATA_TOTAL

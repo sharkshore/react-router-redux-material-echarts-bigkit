@@ -3,7 +3,7 @@ import Paper from 'material-ui/Paper';
 
 import styles from './css/ShfhscContent.css'
 
-import SearchForm from './SearchForm.jsx'
+import SearchForm from './IdCardSearchForm.jsx'
 import Histogram from '../../common/Histogram.jsx'
 import ChartContainer from './ChartContainer.jsx'
 import FanChart from '../../common/FanChart.jsx'

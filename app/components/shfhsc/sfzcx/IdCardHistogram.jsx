@@ -8,7 +8,7 @@ import {getIdCardHistogramData} from './redux/IdCardRepositoryRedux'
 import styles from './css/LeftHistogram.css'
 
 
-import {TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_FORMATTER, }  from './redux/IdCardHistogramConst'
+import {TITLE,  X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_FORMATTER, }  from './redux/IdCardHistogramConst'
 
 
 /**
@@ -17,7 +17,9 @@ import {TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME,
 class IdCardHistogram extends React.Component {
 
     render() {
-        const {DATA_TOTAL,DATA_ONE,DATA_TWO}=this.props;
+        const {DATA_TOTAL,DATA_ONE,DATA_TWO,dateAndMember}=this.props;
+
+        let SUB_TITLE= `时间:${dateAndMember.beginDateStr} -- ${dateAndMember.endDateStr}\n商户:${dateAndMember.memberName} `;
         const baseOptionSet={TITLE, SUB_TITLE, X_AXIS_ARRAY, X_AXIS_TITLE, Y_AXIS_TITLE, SERIES_NAME, TOOL_TIP_FORMATTER,   } ;
         const dataOptionSet={DATA_TOTAL,DATA_TWO,DATA_ONE};
 
@@ -34,6 +36,7 @@ export default connect (
         DATA_TOTAL:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','',0),
         DATA_ONE:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','',1),
         DATA_TWO:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','',2),
+        dateAndMember:state.IdcardFormParam
     }),
     {
 

@@ -1,4 +1,3 @@
-import {pageSize} from '../../../../consts/TablePageSet'
 
 /**
  * 本reduce处理身份证的表格需要显示的数据
@@ -20,7 +19,6 @@ export function updatePagerAction(currNumber){
 
 /**
  * 表格的分页信息
- * @type {{data: Array, page: {pageSize, pageNum: number, currentNum: number, totalCount: number}}}
  */
 const initData={
         pageMaxNum:1,          //最大页码
@@ -36,7 +34,7 @@ export default function idcardTablePager(state = initData, action) {
         case UPDATE_IDCARD_RES_TIME_TABLE_PAGER_SUCCESS:
             console.log('选取第'+action.currNumber+'页数据');
             return{
-                    pageNum:state.pageNum,
+                    pageMaxNum:state.pageMaxNum,
                     currentNum:action.currNumber,
                     totalCount:state.totalCount
             }

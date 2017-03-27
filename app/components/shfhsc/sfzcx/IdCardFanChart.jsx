@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux'
 
 import FanChart from '../../common/FanChart.jsx'
-import {TITLE, SUB_TITLE, LEGEND_DATA, TOOL_TIP_FORMATTER, DATA_TOTAL,} from './redux/IdCardFanChartConst'
+import {TITLE,  LEGEND_DATA, TOOL_TIP_FORMATTER, } from './redux/IdCardFanChartConst'
 import {getIdCardFanChartData}from './redux/IdCardRepositoryRedux'
 import styles from './css/RightFanChart.css'
 
@@ -13,8 +13,9 @@ import styles from './css/RightFanChart.css'
 class IdCardFanChart extends React.Component {
 
     render() {
+        const {dateAndMember,DATA_TOTAL,}=this.props;
 
-        const {DATA_TOTAL,}=this.props;
+        let SUB_TITLE= `时间:${dateAndMember.beginDateStr} -- ${dateAndMember.endDateStr}\n商户:${dateAndMember.memberName} `;
         const baseOptionSet = {TITLE, SUB_TITLE, LEGEND_DATA, TOOL_TIP_FORMATTER,};
         const dataOptionSet = {DATA_TOTAL};
 
@@ -29,6 +30,7 @@ class IdCardFanChart extends React.Component {
 export default connect(
     (state, ownProps) => ({
         DATA_TOTAL: getIdCardFanChartData(state.IdCardRepository,'2017-03-01','2017-07-08',''),
+        dateAndMember:state.IdcardFormParam
     }),
     {
     }
