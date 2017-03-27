@@ -7,12 +7,12 @@ var config = {
     devServer: {
         port: 7777,
         //添加反向代理的调试
-        proxy: {
-            '/idcard/*': {
+/*        proxy: {
+            '/idcard/!*': {
                 target: 'http://127.0.0.1:3000',
                 changeOrigin: true
             },
-        }
+        }*/
     },
     module: {
         loaders: [

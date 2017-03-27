@@ -135,14 +135,14 @@ export default connect(
     (dispatch, ownProps) => ({
         refreshData: ( params ) => dispatch(
             {
-                url: GET_IDCARD_TIME_STATISCS_INFO,
+                url: URL_PREFIX+GET_IDCARD_TIME_STATISCS_INFO,
                 params: params,
                 types: [REFRESH_IDCARD_RES_TIME_DATA, REFRESH_IDCARD_RES_TIME_DATA_SUCCESS, REFRESH_IDCARD_RES_TIME_DATA_ERROR]
             }
         ),
         fillAutoComplete: (params) => dispatch(
             {
-                url: GET_ALL_MEMBER_NAMES,
+                url: URL_PREFIX+GET_ALL_MEMBER_NAMES,
                 params: params,
                 types: [REFRESH_IDCARD_SEARCH_AUTOCOMPLETE, REFRESH_IDCARD_SEARCH_AUTOCOMPLETE_SUCCESS, REFRESH_IDCARD_SEARCH_AUTOCOMPLETE_ERROR]
             }
