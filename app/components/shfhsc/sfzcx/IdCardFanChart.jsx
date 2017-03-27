@@ -29,7 +29,7 @@ class IdCardFanChart extends React.Component {
 
 export default connect(
     (state, ownProps) => ({
-        DATA_TOTAL: getIdCardFanChartData(state.IdCardRepository,'2017-03-01','2017-07-08',''),
+        DATA_TOTAL: getIdCardFanChartData(state.IdCardRepository,state.IdcardFormParam),
         dateAndMember:state.IdcardFormParam
     }),
     {

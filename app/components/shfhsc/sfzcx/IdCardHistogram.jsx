@@ -33,9 +33,9 @@ class IdCardHistogram extends React.Component {
 
 export default connect (
     (state,ownProps)=>({
-        DATA_TOTAL:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','',0),
-        DATA_ONE:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','',1),
-        DATA_TWO:getIdCardHistogramData(state.IdCardRepository,'2017-03-01','2017-07-08','',2),
+        DATA_TOTAL:getIdCardHistogramData(state.IdCardRepository,state.IdcardFormParam,0),
+        DATA_ONE:getIdCardHistogramData(state.IdCardRepository,state.IdcardFormParam,1),
+        DATA_TWO:getIdCardHistogramData(state.IdCardRepository,state.IdcardFormParam,2),
         dateAndMember:state.IdcardFormParam
     }),
     {

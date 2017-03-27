@@ -11,3235 +11,3236 @@ import {pageSize,countPageNum} from '../../../../consts/TablePageSet'
 
 //IdCard 2个图表和一个表格公用这个数据仓库
 const initIdCardData = [
+
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 1,
         count: 500
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 2,
         count: 300
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 3,
         count: 700
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 4,
         count: 882
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 5,
         count: 992
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 6,
         count: 256
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 7,
         count: 990
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 8,
         count: 875
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 9,
         count: 379
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 10,
         count: 1973
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 11,
         count: 973
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 1,
         count: 500
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 2,
         count: 300
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 3,
         count: 700
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 4,
         count: 882
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 5,
         count: 992
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 6,
         count: 256
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 7,
         count: 990
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 8,
         count: 875
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 9,
         count: 379
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 10,
         count: 973
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 11,
         count: 973
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 1,
         count: 1500
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 2,
         count: 1300
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 3,
         count: 1700
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 4,
         count: 1882
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 5,
         count: 1992
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 6,
         count: 1256
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 7,
         count: 1990
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 8,
         count: 1875
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 9,
         count: 1379
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 10,
         count: 11973
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 11,
         count: 1973
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 1,
         count: 1500
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 2,
         count: 1300
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 3,
         count: 1700
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 4,
         count: 1882
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 5,
         count: 1992
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 6,
         count: 1256
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 7,
         count: 1990
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 8,
         count: 1875
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 9,
         count: 1379
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 10,
         count: 1973
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 11,
         count: 1973
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 1,
         count: 2500
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 2,
         count: 2300
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 3,
         count: 2700
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 4,
         count: 2882
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 5,
         count: 2992
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 6,
         count: 2256
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 7,
         count: 2990
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 8,
         count: 2875
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 9,
         count: 2379
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 10,
         count: 21973
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 11,
         count: 2973
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 1,
         count: 2500
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 2,
         count: 2300
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 3,
         count: 2700
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 4,
         count: 2882
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 5,
         count: 2992
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 6,
         count: 2256
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 7,
         count: 2990
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 8,
         count: 2875
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 9,
         count: 2379
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 10,
         count: 2973
     },
     {
-        date: '2017-03-01',
+        date: new Date('2017-03-01'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 11,
         count: 2973
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 1,
         count: 500
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 2,
         count: 300
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 3,
         count: 700
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 4,
         count: 882
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 5,
         count: 992
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 6,
         count: 256
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 7,
         count: 990
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 8,
         count: 875
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 9,
         count: 379
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 10,
         count: 1973
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 11,
         count: 973
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 1,
         count: 500
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 2,
         count: 300
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 3,
         count: 700
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 4,
         count: 882
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 5,
         count: 992
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 6,
         count: 256
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 7,
         count: 990
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 8,
         count: 875
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 9,
         count: 379
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 10,
         count: 973
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 11,
         count: 973
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 1,
         count: 1500
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 2,
         count: 1300
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 3,
         count: 1700
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 4,
         count: 1882
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 5,
         count: 1992
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 6,
         count: 1256
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 7,
         count: 1990
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 8,
         count: 1875
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 9,
         count: 1379
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 10,
         count: 11973
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 11,
         count: 1973
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 1,
         count: 1500
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 2,
         count: 1300
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 3,
         count: 1700
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 4,
         count: 1882
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 5,
         count: 1992
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 6,
         count: 1256
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 7,
         count: 1990
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 8,
         count: 1875
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 9,
         count: 1379
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 10,
         count: 1973
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 11,
         count: 1973
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 1,
         count: 2500
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 2,
         count: 2300
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 3,
         count: 2700
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 4,
         count: 2882
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 5,
         count: 2992
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 6,
         count: 2256
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 7,
         count: 2990
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 8,
         count: 2875
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 9,
         count: 2379
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 10,
         count: 21973
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 11,
         count: 2973
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 1,
         count: 2500
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 2,
         count: 2300
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 3,
         count: 2700
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 4,
         count: 2882
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 5,
         count: 2992
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 6,
         count: 2256
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 7,
         count: 2990
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 8,
         count: 2875
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 9,
         count: 2379
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 10,
         count: 2973
     },
     {
-        date: '2017-03-02',
+        date: new Date('2017-03-02'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 11,
         count: 2973
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 1,
         count: 500
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 2,
         count: 300
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 3,
         count: 700
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 4,
         count: 882
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 5,
         count: 992
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 6,
         count: 256
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 7,
         count: 990
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 8,
         count: 875
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 9,
         count: 379
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 10,
         count: 1973
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 11,
         count: 973
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 1,
         count: 500
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 2,
         count: 300
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 3,
         count: 700
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 4,
         count: 882
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 5,
         count: 992
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 6,
         count: 256
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 7,
         count: 990
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 8,
         count: 875
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 9,
         count: 379
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 10,
         count: 973
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 11,
         count: 973
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 1,
         count: 1500
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 2,
         count: 1300
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 3,
         count: 1700
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 4,
         count: 1882
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 5,
         count: 1992
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 6,
         count: 1256
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 7,
         count: 1990
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 8,
         count: 1875
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 9,
         count: 1379
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 10,
         count: 11973
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 11,
         count: 1973
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 1,
         count: 1500
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 2,
         count: 1300
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 3,
         count: 1700
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 4,
         count: 1882
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 5,
         count: 1992
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 6,
         count: 1256
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 7,
         count: 1990
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 8,
         count: 1875
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 9,
         count: 1379
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 10,
         count: 1973
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 11,
         count: 1973
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 1,
         count: 2500
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 2,
         count: 2300
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 3,
         count: 2700
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 4,
         count: 2882
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 5,
         count: 2992
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 6,
         count: 2256
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 7,
         count: 2990
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 8,
         count: 2875
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 9,
         count: 2379
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 10,
         count: 21973
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 11,
         count: 2973
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 1,
         count: 2500
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 2,
         count: 2300
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 3,
         count: 2700
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 4,
         count: 2882
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 5,
         count: 2992
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 6,
         count: 2256
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 7,
         count: 2990
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 8,
         count: 2875
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 9,
         count: 2379
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 10,
         count: 2973
     },
     {
-        date: '2017-03-03',
+        date: new Date('2017-03-03'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 11,
         count: 2973
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 1,
         count: 500
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 2,
         count: 300
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 3,
         count: 700
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 4,
         count: 882
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 5,
         count: 992
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 6,
         count: 256
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 7,
         count: 990
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 8,
         count: 875
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 9,
         count: 379
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 10,
         count: 1973
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 11,
         count: 973
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 1,
         count: 500
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 2,
         count: 300
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 3,
         count: 700
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 4,
         count: 882
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 5,
         count: 992
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 6,
         count: 256
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 7,
         count: 990
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 8,
         count: 875
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 9,
         count: 379
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 10,
         count: 973
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 11,
         count: 973
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 1,
         count: 1500
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 2,
         count: 1300
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 3,
         count: 1700
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 4,
         count: 1882
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 5,
         count: 1992
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 6,
         count: 1256
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 7,
         count: 1990
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 8,
         count: 1875
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 9,
         count: 1379
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 10,
         count: 11973
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 11,
         count: 1973
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 1,
         count: 1500
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 2,
         count: 1300
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 3,
         count: 1700
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 4,
         count: 1882
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 5,
         count: 1992
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 6,
         count: 1256
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 7,
         count: 1990
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 8,
         count: 1875
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 9,
         count: 1379
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 10,
         count: 1973
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 11,
         count: 1973
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 1,
         count: 2500
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 2,
         count: 2300
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 3,
         count: 2700
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 4,
         count: 2882
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 5,
         count: 2992
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 6,
         count: 2256
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 7,
         count: 2990
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 8,
         count: 2875
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 9,
         count: 2379
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 10,
         count: 21973
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 11,
         count: 2973
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 1,
         count: 2500
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 2,
         count: 2300
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 3,
         count: 2700
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 4,
         count: 2882
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 5,
         count: 2992
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 6,
         count: 2256
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 7,
         count: 2990
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 8,
         count: 2875
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 9,
         count: 2379
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 10,
         count: 2973
     },
     {
-        date: '2017-04-04',
+        date: new Date('2017-04-04'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 11,
         count: 2973
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 1,
         count: 300
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 2,
         count: 300
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 3,
         count: 300
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 4,
         count: 382
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 5,
         count: 392
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 6,
         count: 356
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 7,
         count: 390
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 8,
         count: 375
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 9,
         count: 379
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 10,
         count: 3973
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 11,
         count: 373
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 1,
         count: 300
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 2,
         count: 300
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 3,
         count: 300
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 4,
         count: 382
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 5,
         count: 392
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 6,
         count: 356
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 7,
         count: 390
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 8,
         count: 375
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 9,
         count: 379
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 10,
         count: 373
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 11,
         count: 373
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 1,
         count: 3500
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 2,
         count: 3300
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 3,
         count: 3700
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 4,
         count: 3882
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 5,
         count: 3992
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 6,
         count: 3256
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 7,
         count: 3990
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 8,
         count: 3875
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 9,
         count: 3379
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 10,
         count: 31973
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 11,
         count: 3973
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 1,
         count: 3500
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 2,
         count: 3300
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 3,
         count: 3700
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 4,
         count: 3882
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 5,
         count: 3992
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 6,
         count: 3256
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 7,
         count: 3990
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 8,
         count: 3875
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 9,
         count: 3379
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 10,
         count: 3973
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 11,
         count: 3973
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 1,
         count: 3500
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 2,
         count: 3300
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 3,
         count: 3700
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 4,
         count: 3882
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 5,
         count: 3992
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 6,
         count: 3256
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 7,
         count: 3990
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 8,
         count: 3875
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 9,
         count: 3379
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 10,
         count: 31973
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 11,
         count: 3973
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 1,
         count: 3500
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 2,
         count: 3300
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 3,
         count: 3700
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 4,
         count: 3882
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 5,
         count: 3992
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 6,
         count: 3256
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 7,
         count: 3990
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 8,
         count: 3875
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 9,
         count: 3379
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 10,
         count: 3973
     },
     {
-        date: '2017-05-05',
+        date: new Date('2017-05-05'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 11,
         count: 3973
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 1,
         count: 600
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 2,
         count: 600
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 3,
         count: 600
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 4,
         count: 682
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 5,
         count: 692
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 6,
         count: 656
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 7,
         count: 690
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 8,
         count: 675
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 9,
         count: 679
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 10,
         count: 6973
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 11,
         count: 673
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 1,
         count: 600
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 2,
         count: 600
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 3,
         count: 600
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 4,
         count: 682
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 5,
         count: 692
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 6,
         count: 656
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 7,
         count: 690
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 8,
         count: 675
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 9,
         count: 679
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 10,
         count: 673
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 11,
         count: 673
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 1,
         count: 6500
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 2,
         count: 6300
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 3,
         count: 6700
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 4,
         count: 6882
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 5,
         count: 6992
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 6,
         count: 6256
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 7,
         count: 6990
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 8,
         count: 6875
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 9,
         count: 6379
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 10,
         count: 61973
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 11,
         count: 6973
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 1,
         count: 6500
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 2,
         count: 6300
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 3,
         count: 6700
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 4,
         count: 6882
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 5,
         count: 6992
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 6,
         count: 6256
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 7,
         count: 6990
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 8,
         count: 6875
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 9,
         count: 6379
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 10,
         count: 6973
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 11,
         count: 6973
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 1,
         count: 6500
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 2,
         count: 6300
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 3,
         count: 6700
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 4,
         count: 6882
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 5,
         count: 6992
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 6,
         count: 6256
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 7,
         count: 6990
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 8,
         count: 6875
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 9,
         count: 6379
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 10,
         count: 61973
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 11,
         count: 6973
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 1,
         count: 6500
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 2,
         count: 6300
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 3,
         count: 6700
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 4,
         count: 6882
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 5,
         count: 6992
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 6,
         count: 6256
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 7,
         count: 6990
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 8,
         count: 6875
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 9,
         count: 6379
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 10,
         count: 6973
     },
     {
-        date: '2017-06-06',
+        date: new Date('2017-06-06'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 11,
         count: 6973
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 1,
         count: 600
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 2,
         count: 600
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 3,
         count: 600
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 4,
         count: 682
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 5,
         count: 692
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 6,
         count: 656
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 7,
         count: 690
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 8,
         count: 675
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 9,
         count: 679
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 10,
         count: 6973
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 1,
         response_level: 11,
         count: 673
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 1,
         count: 600
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 2,
         count: 600
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 3,
         count: 600
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 4,
         count: 682
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 5,
         count: 692
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 6,
         count: 656
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 7,
         count: 690
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 8,
         count: 675
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 9,
         count: 679
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 10,
         count: 673
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '鹏元征信',
         product: 2,
         response_level: 11,
         count: 673
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 1,
         count: 6500
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 2,
         count: 6300
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 3,
         count: 6700
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 4,
         count: 6882
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 5,
         count: 6992
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 6,
         count: 6256
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 7,
         count: 6990
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 8,
         count: 6875
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 9,
         count: 6379
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 10,
         count: 61973
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 1,
         response_level: 11,
         count: 6973
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 1,
         count: 6500
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 2,
         count: 6300
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 3,
         count: 6700
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 4,
         count: 6882
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 5,
         count: 6992
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 6,
         count: 6256
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 7,
         count: 6990
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 8,
         count: 6875
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 9,
         count: 6379
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 10,
         count: 6973
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '腾讯征信',
         product: 2,
         response_level: 11,
         count: 6973
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 1,
         count: 6500
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 2,
         count: 6300
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 3,
         count: 6700
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 4,
         count: 6882
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 5,
         count: 6992
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 6,
         count: 6256
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 7,
         count: 6990
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 8,
         count: 6875
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 9,
         count: 6379
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 10,
         count: 61973
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 1,
         response_level: 11,
         count: 6973
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 1,
         count: 6500
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 2,
         count: 6300
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 3,
         count: 6700
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 4,
         count: 6882
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 5,
         count: 6992
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 6,
         count: 6256
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 7,
         count: 6990
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 8,
         count: 6875
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 9,
         count: 6379
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 10,
         count: 6973
     },
     {
-        date: '2017-07-07',
+        date: new Date('2017-07-07'.replace(/-/g,'/')),
         member: '宝付支付有限公司',
         product: 2,
         response_level: 11,
@@ -3264,6 +3265,7 @@ export default function IdCardRepository(state = initIdCardData, action) {
         case REFRESH_IDCARD_RES_TIME_DATA_SUCCESS:
             console.log('REFRESH_IDCARD_RES_TIME_DATA_SUCCESS');
             //MyEcharts组件会自动检测数据的变化,数据发生变化会自动setOption
+            console.log(action.payload);
             return action.payload;
         case REFRESH_IDCARD_RES_TIME_DATA_ERROR:
             console.log('REFRESH_IDCARD_RES_TIME_DATA_ERROR');
@@ -3293,7 +3295,10 @@ export default function IdCardRepository(state = initIdCardData, action) {
  }
  ]
  */
-export function getIdCardHistogramData(state, beginDate, endDate, member, product) {
+export function getIdCardHistogramData(state, param, product) {
+
+    let {beginDate,endDate,memberName:member}=param;
+
     if (state.length == 0) {
         return [];
     }
@@ -3306,7 +3311,7 @@ export function getIdCardHistogramData(state, beginDate, endDate, member, produc
     //如果member='',则聚合所有member数据
     filterResult = state.filter((item) => {
         if (product == 0) {
-            if (!member || member == '') {
+            if (!member || member == '' || member=='所有商户') {
                 return beginDate <= item.date && endDate >= item.date;
             } else {
                 return item.member == member && beginDate <= item.date && endDate >= item.date;
@@ -3329,8 +3334,7 @@ export function getIdCardHistogramData(state, beginDate, endDate, member, produc
         item.value = item.count;
         return item;
     });
-    console.log('product:' + product);
-    console.log(finalResult);
+
     return finalResult;
 
 }
@@ -3354,9 +3358,8 @@ export function getIdCardHistogramData(state, beginDate, endDate, member, produc
  ];
 
  */
-export function getIdCardFanChartData(state, beginDate, endDate, member) {
-    console.log('开始时的state...');
-    console.dir(state);
+export function getIdCardFanChartData(state, param) {
+    let {beginDate,endDate,memberName:member}=param;
 
     if (state.length == 0) {
         return [];
@@ -3368,21 +3371,15 @@ export function getIdCardFanChartData(state, beginDate, endDate, member) {
     //1.过滤条件
     //如果member='',则聚合所有member数据
     filterResult = state.filter((item) => {
-        if (!member || member == '') {
+        if (!member || member == '' || member=='所有商户') {
             return beginDate <= item.date && endDate >= item.date;
         } else {
             return item.member == member && beginDate <= item.date && endDate >= item.date;
         }
     });
 
-    console.log('扇形图过滤后的数据:....');
-    console.log(filterResult);
-
     //2.聚合数据,以字段response_level聚合累加到count字段
     finalResult=groupSum(filterResult,'count','response_level');
-
-    console.log('扇形图分组后的数据:....')
-    console.log(finalResult);
 
     //3.构造成name,value的结构
     finalResult = finalResult.map((item) => {
@@ -3392,11 +3389,6 @@ export function getIdCardFanChartData(state, beginDate, endDate, member) {
         return newitem;
     });
 
-    console.log('结束时的state...');
-    console.dir(state);
-
-    console.log('最终result...');
-    console.log(JSON.stringify(finalResult));
 
     return finalResult;
 
@@ -3411,7 +3403,9 @@ export function getIdCardFanChartData(state, beginDate, endDate, member) {
  * @param endDate
  * @param member
  */
-export function getIdCardTableData(state, beginDate, endDate, member) {
+export function getIdCardTableData(state, param) {
+
+    let {beginDate,endDate,memberName:member}=param;
 
     if (state.length == 0) {
         return [];
@@ -3423,7 +3417,7 @@ export function getIdCardTableData(state, beginDate, endDate, member) {
     //1.过滤条件
     //如果member='',则聚合所有member数据
     filterResult = state.filter((item) => {
-        if (!member || member == '') {
+        if (!member || member == '' || member=='所有商户') {
             return beginDate <= item.date && endDate >= item.date;
         } else {
             return item.member == member && beginDate <= item.date && endDate >= item.date;
@@ -3451,9 +3445,11 @@ export function getIdCardTableData(state, beginDate, endDate, member) {
  * @param idcardTable
  * @param idCardRepository
  */
-export function getIdCardTableDataByPage(IdCardRepository,currentNum,beginDate,endDate){
+export function getIdCardTableDataByPage(IdCardRepository,currentNum,param){
     //首先获取表格的总数
-    let data=getIdCardTableData(IdCardRepository,beginDate,endDate,'');
+    let data=getIdCardTableData(IdCardRepository,param);
+    console.log('表格数据');
+    console.dir(data);
     let pageMaxNum=countPageNum(data.length,pageSize);
 
     //返回第一页数据

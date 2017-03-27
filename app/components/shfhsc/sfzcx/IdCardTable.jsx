@@ -33,8 +33,8 @@ class IdCardTable extends React.Component {
 
 export default connect(
     (state, ownProps) => ({
-        TABLE_PAGE_DATA: getIdCardTableDataByPage(state.IdCardRepository, state.IdcardTablePager.currentNum, '2017-03-01', '2017-07-08'),
-        totalCount: getIdCardTableData(state.IdCardRepository, '2017-03-01', '2017-07-08', '').length,
+        TABLE_PAGE_DATA: getIdCardTableDataByPage(state.IdCardRepository, state.IdcardTablePager.currentNum, state.IdcardFormParam),
+        totalCount: getIdCardTableData(state.IdCardRepository, state.IdcardFormParam).length,
         currentNumber: state.IdcardTablePager.currentNum,
         dateAndMember: state.IdcardFormParam
     }),
