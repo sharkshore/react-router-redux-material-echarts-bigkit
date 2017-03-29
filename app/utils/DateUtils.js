@@ -1,7 +1,7 @@
 
 
 /**
- * 获取时间的年月日的格式,2017-03-08
+ * 时间===>年月日的字符串格式,2017-03-08
  */
 export const dateToString = (date) => {
     const year = date.getFullYear();
@@ -16,7 +16,7 @@ export const dateToString = (date) => {
 
 
 /**
- * 获取时间戳的年月日的格式,2017-03-08
+ * 时间戳===>年月日的字符串格式,2017-03-08
  */
 export const timeStampToString = (timestamp) => {
     const date = new Date(parseInt(timestamp) * 1000);
@@ -27,6 +27,20 @@ export const timeStampToString = (timestamp) => {
     if(day<10)day='0'+day;
     return `${year}-${month}-${day}`;
 };
+
+/**
+ *  昨天的日期字符串,格式:2017-03-28
+ */
+export const getLastDayStr=()=>{
+    var day1 = new Date();
+    day1.setTime(day1.getTime()-24*60*60*1000);
+    var year=day1.getFullYear();
+    var month=parseInt(day1.getMonth())+1;
+    var day=day1.getDate();
+    if(month<10)month='0'+month;
+    if(day<10)day='0'+day;
+    return year+"-"+month+"-"+day;
+}
 
 /**
  * 获取30天以前的时间

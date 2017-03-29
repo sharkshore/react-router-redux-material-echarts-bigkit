@@ -25,7 +25,7 @@ export default function IdcardFormParam(state = initData, action) {
             return {
                 beginDateStr:dateToString(action.params.beginDate),
                 endDateStr:dateToString(action.params.endDate),
-                memberName:action.params.searchText==''?'所有商户':action.params.searchText,
+                memberName:action.params.member==''?'所有商户':action.params.member,
                 beginDate:action.params.beginDate,
                 endDate:action.params.endDate
             }

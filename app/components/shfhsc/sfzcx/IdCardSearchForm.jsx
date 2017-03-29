@@ -73,7 +73,7 @@ class IdCardSearchForm extends React.Component {
         let params={
             beginDate: this.state.beginDate,
             endDate: this.state.endDate,
-            searchText: this.state.searchText,
+            member: this.state.searchText,
         };
         this.props.refreshData(params);//请求URL的数据
         this.props.pageActive(1);//将分页插件的当前页码重置为1
