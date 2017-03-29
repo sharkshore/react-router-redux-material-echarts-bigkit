@@ -20,6 +20,6 @@ export const LevelToStr={
 
 //产品与数字的转换
 export const ProductToStr={
-    1:'身份证返照片',
-    2:'身份证不返照片'
+    '1.0':'身份证返照片',
+    '2.0':'身份证不返照片'
 }
